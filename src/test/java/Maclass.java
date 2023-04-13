@@ -9,8 +9,11 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebDriverException;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
+import org.openqa.selenium.remote.RemoteWebDriver;
 
 import java.io.IOException;
+import java.net.MalformedURLException;
+import java.net.URL;
 import java.security.KeyManagementException;
 import java.security.KeyStoreException;
 import java.security.NoSuchAlgorithmException;
@@ -19,14 +22,16 @@ public class Maclass {
     public static WebDriver driver;
 
     @Before
-    public void OpenBrowser(){
+    public void OpenBrowser() throws MalformedURLException {
 
         WebDriverManager.chromedriver().setup();
         // actualise la version de mon driver//
         ChromeOptions options = new ChromeOptions();
         // L'options  permet d'activer le driver  chrome//
         options.addArguments("--remote-allow-origins=*");
-        driver=new ChromeDriver(options);
+      // pour selenium grid au lieu de de new ChromeDriver //
+        driver= new RemoteWebDriver(new URL(" http://172.16.15.84:4444/wd/hub"),options);
+        //driver=new ChromeDriver(options);
         driver.manage().window().maximize();
 
     }

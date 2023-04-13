@@ -4,7 +4,7 @@ import org.junit.runner.RunWith;
 
 @RunWith(Cucumber.class)
 @CucumberOptions(
-        tags = {"@POEI23-372","@POEI23-386"},
+        tags = {"@Test"},
         //chemin  pour les fichiers fetaures
         features = "src/test/resources/features",
         //dossier qui contient les steps de java//
