@@ -1,6 +1,6 @@
 Feature: Sauce Demo Test Connexion KO
 
-	@KO
+	@POEI23-386
 	Scenario Outline: Sauce Demo Test Connexion KO
 		Given je ouvre la page de accueil "https://www.saucedemo.com/"
 		When je rentre le identifiant "<login>" dans le champ identifiant

@@ -44,9 +44,12 @@ public class Maclass {
         driver.quit();
     }
 
-    public static void main(String[] args) throws IOException, NoSuchAlgorithmException, KeyStoreException, KeyManagementException {
-        ImportResultToXray importResultToXray = new ImportResultToXray();
-        importResultToXray.getToken();
-    }
+   // public static void main(String[] args) throws IOException, NoSuchAlgorithmException, KeyStoreException, KeyManagementException {
+     //   ImportResultToXray importResultToXray = new ImportResultToXray();
+      // }
+   public static void main(String[] args) throws IOException, NoSuchAlgorithmException, KeyStoreException, KeyManagementException, KeyManagementException, InterruptedException {
+       ImportResultToXray importResultToXray = new ImportResultToXray();
+       importResultToXray.ImportToXray();
+   }
 }
 
