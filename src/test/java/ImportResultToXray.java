@@ -23,8 +23,8 @@ import java.security.KeyStoreException;
 import java.security.NoSuchAlgorithmException;
 
 public class ImportResultToXray {
-    String clientID = " 21B753C7752A4F40A897AD958A666473";
-    String clientSecret = " a41e5532d5134aaef3d76379e0ff65843e9d98bcd674e3c45026db0e46ffc4dd";
+    String clientID = "21B753C7752A4F40A897AD958A666473";
+    String clientSecret = "a41e5532d5134aaef3d76379e0ff65843e9d98bcd674e3c45026db0e46ffc4dd";
 
     // La fonction pour créer automatiquement les Token //
     public String getToken() throws IOException, NoSuchAlgorithmException, KeyStoreException, KeyManagementException {
@@ -116,3 +116,5 @@ public class ImportResultToXray {
         System.out.println(result);
     }
 }
+
+

@@ -10,6 +10,11 @@ import org.openqa.selenium.WebDriverException;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 
+import java.io.IOException;
+import java.security.KeyManagementException;
+import java.security.KeyStoreException;
+import java.security.NoSuchAlgorithmException;
+
 public class Maclass {
     public static WebDriver driver;
 
@@ -37,6 +42,11 @@ public class Maclass {
             }
         }
         driver.quit();
+    }
+
+    public static void main(String[] args) throws IOException, NoSuchAlgorithmException, KeyStoreException, KeyManagementException {
+        ImportResultToXray importResultToXray = new ImportResultToXray();
+        importResultToXray.getToken();
     }
 }
 
